@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import '../styles/Register.css';
@@ -27,16 +28,16 @@ export default function Register() {
     }
 
     // Validate password complexity
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match', { position: 'top-center' });
+      return;
+    }
     if (!passwordIsValid(password)) {
       toast.error('Password must contain at least one uppercase letter, one lowercase letter, one special character, and one number', { position: 'top-center' });
       return;
     }
 
     // Validate password match
-    if (password !== confirmPassword) {
-      toast.error('Passwords do not match', { position: 'top-center' });
-      return;
-    }
 
     // Your registration logic goes here
 

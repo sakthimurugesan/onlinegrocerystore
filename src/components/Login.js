@@ -5,7 +5,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { useRef } from 'react';
 import { useUser } from './UserContext';
-import { ToastContainer, toast } from 'react-toastify'; // Import toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
   const navigate = useNavigate();

@@ -1,0 +1,11 @@
+.searchBar-div
+{
+    margin-top: 50px;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    background-color: red;
+    width: 85%;
+    border-radius: 5px;
+    justify-content: space-around;
+}

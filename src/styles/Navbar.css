@@ -1,9 +1,10 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
   
 
-  
   .nav {
     height: 50px;
     width: 100%;
@@ -35,14 +36,22 @@
     z-index: 99;
   }
   
-  .nav > .nav-links > a {
+  .nav > .nav-links > a,.login-email-div {
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color: #efefef;
   }
-  
-  .nav > .nav-links > a:hover {
+  .login-email-div
+  {
+    display: inline;
+    height: 100%;
+  }
+  .login-email-div a
+  {
+    padding: 13px 10px 13px 10px;
+  }
+  .nav > .nav-links > a:hover,  .login-email-div a:hover {
     background-color: rgba(0, 0, 0, 0.3);
   }
   
@@ -94,4 +103,19 @@
       height: calc(100vh - 50px);
       overflow-y: auto;
     }
+   
+    .login-email-div a
+    {
+     
+      display: block;
+    }
+    .nav-links,   .login-email-div
+    {
+      padding-bottom: 0px;
+    }
+  }
+
+  a{
+    text-decoration: none !important;
+    cursor: pointer;
   }

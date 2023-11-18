@@ -1,7 +1,4 @@
-// Filename - App.js
-
 import "./App.css";
-// importing components from react-router-dom package
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -9,13 +6,12 @@ import {
 	Navigate,
 	Switch
 } from "react-router-dom";
-// import Home component
-import Navbar from "./components/Navbar";
-// import About component
 import Login from "./components/Login";
+import Logout from "./components/Logout";
 import About from "./components/About";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import Shop from "./components/Shop";
 var login_true=false;
 
 
@@ -25,9 +21,11 @@ function App() {
 			<Router>
 				<Routes>
 					<Route path="/" element={<Home></Home>}/>
+					<Route path="/shop" element={<Shop></Shop>}/>
 					<Route path="/about" element={<About></About>}/>
 					<Route path="/login" element={<Login></Login>}/>
 					<Route path="/register" element={<Register></Register>}/>
+					<Route path="/logout" element={<Logout></Logout>}/>
 					
 				</Routes>
 			</Router>

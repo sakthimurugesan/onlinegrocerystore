@@ -1,19 +1,22 @@
 // Logout.js
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useUser } from './UserContext';
 import { toast } from 'react-toastify';
 
 function Logout() {
   const { logoutUser } = useUser();
 
-  const handleLogout = () => {
-    toast.error(`Logged Out`, { position: "top-center" });
-    logoutUser();
-  };
+  useEffect(() => {
+    const handleLogout = async () => {
+      toast.success(`Logged Out`, { position: "top-center" });
+      await logoutUser();
+      toast.dismiss(); // Dismiss the toast after logout
+    };
 
-  return (
-    <a onClick={handleLogout}>Logout</a>
-  );
+    handleLogout();
+  }, [logoutUser]);
+
+  return null; // No need to render anything, as the effect handles the logout logic and toast
 }
 
 export default Logout;

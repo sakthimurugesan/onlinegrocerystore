@@ -188,7 +188,7 @@ export default function Register() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="/login" variant="body2">
+                <Link href="#" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
@@ -199,6 +199,5 @@ export default function Register() {
       </Container>
     </ThemeProvider>
     <ToastContainer></ToastContainer>
-    <Footer></Footer>
     </>);
         }

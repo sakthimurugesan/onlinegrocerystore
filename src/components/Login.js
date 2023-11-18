@@ -7,6 +7,7 @@ import { useRef } from 'react';
 import { useUser } from './UserContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../styles/Login.css'
 
 function Login() {
   const navigate = useNavigate();

@@ -21,7 +21,8 @@ const ProductFilter = ({ categories, onFilterChange, onSearchChange }) => {
             {categories.map((category) => (
               <button key={category} onClick={() => {onFilterChange(category) ; handleC(category[0].toUpperCase() +
                 category.slice(1)); }} >
-                {category}
+                {(category[0].toUpperCase() +
+                category.slice(1))}
               </button>
             ))}
           

@@ -10,15 +10,22 @@ const ProductSearch = ({ products, filters, searchTerm }) => {
   return (
     <div style={{ padding: '50px' }}>
       <center>
-        <ul className='Products'>
+        <ul className='Products' style={{
+          marginTop:"-55px"
+        }}>
           {filteredProducts.map((product) => (
+            
             <li key={product.title}>
-                <img src={'./img/' + product.filename} height='300px' width='200px' alt='nil'></img><br />
+              
+              <img src={'./img/' + product.filename} height='300px' width='200px' alt='nil'></img>
+
+               
+                <br />
                 <p>
                   <b>Product : </b>{product.title} <br />  <b>Price :</b> ${product.price} <br />
                   <b>Rating :</b> {product.rating}/5
                 </p>
-                <button className='but'>Buy</button>
+                <a href={'/shop/product/'+product.filename[0]}><button className='but'>Buy</button></a>
             </li>
           ))}
         </ul>

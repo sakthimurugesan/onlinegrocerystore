@@ -12,6 +12,7 @@ import About from "./components/About";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
+import ProductPage from "./components/ProductPage";
 var login_true = false;
 
 
@@ -21,6 +22,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home></Home>} />
 				<Route path="/shop" element={<Shop></Shop>} />
+				<Route path="/shop/product/:id" element={<ProductPage />} />
 				<Route path="/about" element={<About></About>} />
 				<Route path="/login" element={<Login></Login>} />
 				<Route path="/register" element={<Register></Register>} />

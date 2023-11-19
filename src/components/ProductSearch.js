@@ -1,7 +1,6 @@
 import React from 'react';
-
+import '../styles/ProductSearch.css';
 const ProductSearch = ({ products, filters, searchTerm }) => {
-  // Apply filters and search term
   const filteredProducts = products
     .filter((product) => filters.length === 0 || filters.includes(product.type) || filters.includes('all'))
     .filter((product) =>
@@ -9,16 +8,21 @@ const ProductSearch = ({ products, filters, searchTerm }) => {
     );
 
   return (
-    <div>
-      <h2>Filtered Products</h2>
-      <ul>
-        {filteredProducts.map((product) => (
-          <li key={product.title}>
-            <img src={product.filename}></img>
-            {product.title} - {product.type}
-          </li>
-        ))}
-      </ul>
+    <div style={{ padding: '50px' }}>
+      <center>
+        <ul className='Products'>
+          {filteredProducts.map((product) => (
+            <li key={product.title}>
+                <img src={'./img/' + product.filename} height='300px' width='200px' alt='nil'></img><br />
+                <p>
+                  <b>Product : </b>{product.title} <br />  <b>Price :</b> ${product.price} <br />
+                  <b>Rating :</b> {product.rating}/5
+                </p>
+                <button className='but'>Buy</button>
+            </li>
+          ))}
+        </ul>
+      </center>
     </div>
   );
 };

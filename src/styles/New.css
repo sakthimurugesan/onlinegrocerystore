@@ -1,5 +1,219 @@
+.trending-pro-div-main
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    height: auto;
 
-      
+}
+.trending-pro-div
+{
+    width: 85%;
+    background-color: white;
+    height: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+}
+.Products{
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 20px;
+    text-align: left;
+    font-size: medium;
+    font-family: sans-serif;
+}
+.product-div{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color:white;
+    padding: 10px;
+    border-radius: 9px;        
+    display: flex;          
+    flex-direction: column; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.product-div:hover{
+    cursor: pointer;
+}
+.product-div img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 11px;
+}
+.product-div p{
+    height: 80px;
+    max-height: max-content;
+}
+ 
+
+/* Extra small devices (phones, 600px and down) */
+
+
+@media only screen and (max-width: 600px) {
+  .trending-pro-div-main
+  {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 50px;
+      height: auto;
+  
+  }
+  .trending-pro-div
+  {
+      width: 85%;
+      background-color: white;
+      height: auto;
+      padding: 10px;
+      box-sizing: border-box;
+      display: flex;
+  
+  }
+ }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .trending-pro-div-main
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    height: auto;
+
+}
+.trending-pro-div
+{
+    width: 85%;
+    background-color: white;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+
+}
+.Products{
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 20px;
+    text-align: left;
+    font-size: medium;
+    font-family: sans-serif;
+}
+.product-div{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color:white;
+    padding: 10px;
+    border-radius: 9px;        
+    display: flex;          
+    flex-direction: column; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.product-div:hover{
+    cursor: pointer;
+}
+.product-div img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 11px;
+}
+.product-div p{
+    height: 80px;
+    max-height: max-content;
+}
+ 
+ }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+  .trending-pro-div-main
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+    height: auto;
+
+}
+.trending-pro-div
+{
+    width: 85%;
+    background-color: white;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+
+}
+.Products{
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 20px;
+    text-align: left;
+    font-size: medium;
+    font-family: sans-serif;
+}
+.product-div{
+    height: 100%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color:white;
+    padding: 10px;
+    border-radius: 9px;        
+    display: flex;          
+    flex-direction: column; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.product-div:hover{
+    cursor: pointer;
+}
+.product-div img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 11px;
+}
+.product-div p{
+    height: 80px;
+    max-height: max-content;
+}
+ 
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+
+
+
+@media only screen and (min-width: 1200px) { }
       .container__bg {
         background: #fafafa;
       }
@@ -579,9 +793,7 @@
       .newsletter {
         margin-bottom: 55px;
       }
-      .footer__container {
-        border-bottom: 0.15px solid #707070;
-      }
+      
       
       .copyright > p {
         margin: 20px 0px;
@@ -857,9 +1069,8 @@
       
         /* eight eight eight */
       
-        .footer__container {
-          display: flex;
-        }
+        
+        
         .newsletter,
         .dog__categories {
           width: 30%;
@@ -912,65 +1123,3 @@
           justify-content: space-between;
         }
       }
-.trending-pro-div-main
-{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 50px;
-    height: fit-content;
-
-}
-.trending-pro-div
-{
-    width: 85%;
-    background-color: red;
-    height: 500px;
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-
-}
-.Products{
-    height: 100%;
-    
-    margin-top: 150px;
-    width: 100%;
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    gap: 20px;
-    overflow-x: auto;
-    text-align: left;
-    font-size: medium;
-    font-family: sans-serif;
-}
-.Products > li{
-    height: max-content;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    background-color:white;
-    padding: 10px;
-    flex: 0 0 auto; 
-    border-radius: 9px;        
-    display: flex;          
-    flex-direction: column; 
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-.Products > li >  :hover{
-    cursor: pointer;
-}
-.Products > li > img{
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 11px;
-}
-.Products > li > p{
-    height: 80px;
-    max-height: max-content;
-}

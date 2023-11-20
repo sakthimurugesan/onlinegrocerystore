@@ -1,6 +1,7 @@
 import '../styles/New.css'
 import filteredProducts from './products.json'
 export default function New() {
+    const trendingProducts = filteredProducts.filter((product) => product.trend === "true");
     return (
         <>
             <section id="one">
@@ -28,12 +29,10 @@ export default function New() {
 
                 <div className='trending-pro-div'>
 
-                    <ul className='Products' style={{
-                        marginTop: "-55px"
-                    }}>
-                        {filteredProducts.map((product) => (
+                    <div className='Products'>
+                        {trendingProducts.map((product) => (
 
-                            <li key={product.title}>
+                            <div className='product-div' key={product.title}>
 
                                 <img src={'./img/' + product.filename} height='300px' width='200px' alt='nil'></img>
 
@@ -44,9 +43,9 @@ export default function New() {
                                     <b>Rating :</b> {product.rating}/5
                                 </p>
                                 <a href={'/shop/product/' + product.filename[0]}><button className='but'>Buy</button></a>
-                            </li>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
             </div>
             <section id="one-half" class="goblack">

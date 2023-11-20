@@ -27,7 +27,8 @@
     "height": 450,
     "width": 299,
     "price": 18.95,
-    "rating": 3
+    "rating": 3,
+    "trend":"true"
   },
   {
     "title": "Green smoothie",
@@ -87,7 +88,8 @@
     "height": 600,
     "width": 399,
     "price": 28.59,
-    "rating": 4
+    "rating": 4,
+    "trend":"true"
   },
   {
     "title": "Lemon and salt",
@@ -107,7 +109,8 @@
     "height": 450,
     "width": 301,
     "price": 17.48,
-    "rating": 3
+    "rating": 3,
+    "trend":"true"
   },
   {
     "title": "Legums",
@@ -237,7 +240,8 @@
     "height": 450,
     "width": 299,
     "price": 17.01,
-    "rating": 2
+    "rating": 2,
+    "trend":"true"
   },
   {
     "title": "Breakfast with cottage",
@@ -277,7 +281,8 @@
     "height": 600,
     "width": 398,
     "price": 27.81,
-    "rating": 5
+    "rating": 5,
+    "trend":"true"
   },
   {
     "title": "Cuban sandwiche",

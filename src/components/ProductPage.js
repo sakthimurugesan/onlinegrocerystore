@@ -66,9 +66,7 @@ const ProductPage = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit
               amet fringilla lorem. Interdum et malesuada fames ac ante ipsum
               primis in faucibus. Pellentesque quis ullamcorper nibh, eget
-              mattis lectus. Suspendisse potenti. Etiam cursus magna nec urna
-              rutrum consequat. Aenean a faucibus lectus. Nam sit amet ligula et
-              urna imperdiet hendrerit.
+           
             </p>
             <select
               style={{

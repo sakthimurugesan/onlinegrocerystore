@@ -1,7 +1,7 @@
 import '../styles/New.css'
 import filteredProducts from './products.json'
 export default function New() {
-    const trendingProducts = filteredProducts.filter((product) => product.trend === "true");
+    const trendingProducts = filteredProducts.filter((product) => product.trend === "TRUE");
     return (
         <>
             <section id="one">

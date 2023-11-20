@@ -25,7 +25,7 @@ const ProductSearch = ({ products, filters, searchTerm }) => {
                   <b>Product : </b>{product.title} <br />  <b>Price :</b> ${product.price} <br />
                   <b>Rating :</b> {product.rating}/5
                 </p>
-                <a href={'/shop/product/'+product.filename[0]}><button className='but'>Buy</button></a>
+                <a href={'/shop/product/'+product.id}><button className='but'>Buy</button></a>
             </li>
           ))}
         </ul>

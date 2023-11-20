@@ -11,7 +11,7 @@ const ProductPage = () => {
   const [selectValue, setSelectValue] = useState(1);
 
   useEffect(() => {
-    const selectedProduct = productsData.find((item) => item.filename[0] == id);
+    const selectedProduct = productsData.find((item) => item.id == id);
     setProduct(selectedProduct);
   }, [id]);
 

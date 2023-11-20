@@ -1,22 +1,19 @@
 import '../styles/New.css'
 import filteredProducts from './products.json'
 export default function New() {
-    const trendingProducts = filteredProducts.filter((product) => product.trend === "true");
+    const trendingProducts = filteredProducts.filter((product) => product.trend === "TRUE");
     return (
         <>
             <section id="one">
 
-
-
                 <div class="content">
                     <div class="text-content">
-                        <h1 class="white">Providing Special care
-                            For <strong>Your Pets!</strong>
+                        <h1 class="white">Fresh Picks Market: Your One-Stop Shop for Quality Groceries
                         </h1>
-                        <h4 class="blackish">We offer special services for special pets!</h4>
+                       
                         <div class="two-button">
-                            <button class="w-btn btn">View Our Services</button>
-                            <button class="t-btn btn">Hire Us</button>
+                           
+                            <button class="t-btn btn">Shop</button>
                         </div>
 
                     </div>
@@ -48,25 +45,47 @@ export default function New() {
                     </div>
                 </div>
             </div>
+            <center><h1>What's Cooking</h1></center>
+            <div className='cooking-main-div'>
+                <div className='cooking-card-div'>
+                    <div className='cooking-card'>
+                        <img src="TheSupreme.jpeg"></img>
+                        <a href='#'><h6>TheSupreme</h6></a>
+                    </div>
+                    <div className='cooking-card'>
+                        <img src="SeafoodCocktails.png"></img>
+                        <a href='#'><h6>Sea food Cocktails</h6></a>
+                    </div>
+                    <div className='cooking-card'>
+                        <img src="MaitakeMushrooms.jpeg"></img>
+                        <a href='#'><h6>Maitake Mushrooms</h6></a>
+                    </div>
+                    <div className='cooking-card'>
+                        <img src="FruityCoffees.jpeg"></img>
+                        <a href='#'><h6>Fruity Coffees</h6></a>
+                    </div>
+                    
+             
+                </div>
+            </div>
             <section id="one-half" class="goblack">
-                <span><img src="https://images.unsplash.com/photo-1581579186913-45ac3e6efe93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" /></span>
+                <span><img src="p12.jpg" alt="" /></span>
 
                 <div class="half-content">
                     <div class="half__text">
                         <h1>About Us</h1>
-                        <p>Orci urna. In et augue ornare, tempor massa in, luctus sapien. Proin a diam et dui fermentum dolor
-                            molestie vel id neque. Donec sed tempus enim, a congue risus. Pellen tesqu.</p>
+                        <p>Sustainability is at the core of our values. We strive to make responsible choices in sourcing products, reducing our environmental footprint, and supporting local farmers and producers. Our commitment to eco-friendly practices extends to our packaging and waste management initiatives.</p>
                     </div>
                     <div class="half__boxes">
                         <div class="box">
                             <span href="#"><i class="fas fa-paw logo"></i></span>
                             <h2>Our Mission</h2>
-                            <p>In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims.In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims.In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims.</p>
+                            <p>Empowering Communities Through Freshness: Our Mission is to Provide Accessible, High-Quality, and Sustainably Sourced Groceries, Nurturing Health, Well-being, and Culinary Joy in Every Home.</p>
                         </div>
                         <div class="box">
                             <span href="#"><i class="fas fa-paw logo"></i></span>
                             <h2>Our Vision</h2>
-                            <p>In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims.In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims.In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims.</p>
+                            <p>Transforming Lives Through Nourishment: Our Vision is to Be the Premier Grocery Destination, Fostering Healthy Lifestyles, Sustainable Practices, and Enriching Connections Within Every Community We Serve</p>
                         </div>
                     </div>
                 </div>
@@ -76,40 +95,50 @@ export default function New() {
 
             <section id="two">
                 <div class="heading ">
-                    <h1>What We Do</h1>
-                    <p class="lightblack">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque,
-                        eaque ipsa quae ab
-                        illo inventore.</p>
+                    <h1>What We Offer</h1>
+                    <p class="lightblack">
+                        We are looking ahead to satisfy out customer the atmost. We are happy to help people to find right products for people to lead a Healthy and Sustainable life
+                    </p>
 
                 </div>
 
 
                 <div class="container">
                     <div class="info">
-                        <span><img src="https://raw.githubusercontent.com/Nis-chal/dog_website_clone/main/images/img1.jpg" alt="" /></span>
+                        <span><img style={{
+                            objectFit:'cover'
+                            ,borderRadius:"8px"
+                        }} src="delivery (2).jpg" alt="" /></span>
                         <div class="info__text">
-                            <h1>Donec sed teus enime</h1>
+                            <h1>Delivery</h1>
 
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>From our store to your door, we're dedicated to delivering freshness with every order</p>
                             <h5 class="">READ MORE</h5>
                         </div>
                     </div>
                     <div class="info">
-                        <span><img src="https://raw.githubusercontent.com/Nis-chal/dog_website_clone/main/images/img2.jpg" alt="" /></span>
+                        <span><img src="payment.jpeg" style={{
+                            objectFit:'cover'
+                            ,borderRadius:"8px"
+                        }}  alt="" /></span>
                         <div class="info__text">
-                            <h1>It's enim ad minim aute</h1>
+                            <h1>Hassle Free Payment</h1>
 
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>Seamless transactions, happy customers. Pay with ease and shop with peace of mind</p>
 
                             <h5 class="">READ MORE</h5>
                         </div>
                     </div>
                     <div class="info">
-                        <span><img src="https://raw.githubusercontent.com/Nis-chal/dog_website_clone/main/images/img3.jpg" alt="" /></span>
+                        <span><img src="customer1.jpg" style={{
+                            objectFit:'cover',
+                            objectPosition:'0px'
+                            ,borderRadius:"8px"
+                        }}  alt="" /></span>
                         <div class="info__text">
-                            <h1>Ullamco laboris nisi uts</h1>
+                            <h1>Customer Support</h1>
 
-                            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>Service with a smile, support with sincerity. Your satisfaction is our success</p>
 
                             <h5 class="">READ MORE</h5>
                         </div>
@@ -122,11 +151,9 @@ export default function New() {
             <section id="four" class="goblack">
                 <article>
                     <h1>Happy Customers</h1>
-                    <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae, fugiat.</p>
+                    <p>Happy Customer, Happy Us! Your satisfaction is our greatest reward. Thank you for choosing us and allowing us to be a part of your journey to culinary joy and well-being</p>
 
-                    <p>Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae, fugiat. Lorem
-                        ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula.</p>
+                    <p>Thrilled to have you as a happy customer! Your satisfaction fuels our commitment to excellence.</p>
 
                     <div class="article__icon">
                         <div class="customer__info">
@@ -147,9 +174,7 @@ export default function New() {
                         <div class="four__text">
 
                             <p>
-                                Dsuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                eu. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            From the freshest produce to friendly staff, every visit is a delight. The convenience of online ordering and prompt delivery makes this my go-to grocery destination. A five-star experience that keeps me coming back for more!
                                 "
                             </p>
 
@@ -162,9 +187,7 @@ export default function New() {
                         <div class="four__text">
 
                             <p>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                doloremque
-                                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore. "
+                            The selection is diverse, the staff is incredibly helpful, and the commitment to sustainability is commendable. They've turned grocery shopping into an enjoyable experience. Highly recommended!
                             </p>
                             <h4>Petey Cru</h4>
                         </div>
@@ -177,10 +200,10 @@ export default function New() {
 
 
             <section id="six">
-                <h5>PET LOVERS</h5>
-                <h1>Our Team Is Filled With Highly Dedicated Pet Lovers</h1>
+                <h5>Grocery Store</h5>
+                <h1>Our Team Is Filled With Highly Dedicated Staff</h1>
 
-                <button class="btn w-btn">Read More</button>
+             
 
             </section>
 

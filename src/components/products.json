@@ -9,7 +9,7 @@
     "width": 400,
     "price": 28.1,
     "rating": 4,
-    "trend": ""
+    "trend": "TRUE"
   },
   {
     "id": 1,
@@ -21,7 +21,7 @@
     "width": 299,
     "price": 29.45,
     "rating": 4,
-    "trend": ""
+    "trend": "TRUE"
   },
   {
     "id": 2,
@@ -45,7 +45,7 @@
     "width": 399,
     "price": 17.68,
     "rating": 4,
-    "trend": ""
+    "trend": "TRUE"
   },
   {
     "id": 4,
@@ -69,7 +69,7 @@
     "width": 675,
     "price": 11.14,
     "rating": 4,
-    "trend": ""
+    "trend": "TRUE"
   },
   {
     "id": 6,
@@ -93,7 +93,7 @@
     "width": 301,
     "price": 27.35,
     "rating": 0,
-    "trend": ""
+    "trend": "TRUE"
   },
   {
     "id": 8,

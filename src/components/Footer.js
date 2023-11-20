@@ -26,10 +26,10 @@ export default function Footer() {
 					<div class="footer-col">
 						<h4>online shop</h4>
 						<ul>
-							<li><a href="#">watch</a></li>
-							<li><a href="#">bag</a></li>
-							<li><a href="#">shoes</a></li>
-							<li><a href="#">dress</a></li>
+							<li><a href="#">Meat</a></li>
+							<li><a href="#">Dairy</a></li>
+							<li><a href="#">Bakery</a></li>
+							<li><a href="#">Vegan Oil</a></li>
 						</ul>
 					</div>
 					<div class="footer-col">

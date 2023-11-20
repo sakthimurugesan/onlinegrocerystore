@@ -1,0 +1,117 @@
+.slider
+{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+.slider-main-div
+{
+    width: 85%;
+    background-color: blue;
+    height: 90%;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.slider-div
+{
+    height: 60%;
+    background-color: green;
+}
+.slider-card-div
+{
+    background-color: yellow;
+    height: 45%;
+    display: flex;
+    column-gap: 10px;
+    box-sizing: border-box;
+}
+.slider-card-box
+{
+    background-color: brown;
+    border: 1px solid wheat;
+    box-sizing: border-box; 
+    width: 33%;
+    
+}
+
+.one
+{
+    background: url('https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/f40541f3-f64b-4dab-8a10-249da502f3ef.jpg');
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+.two
+{
+    background: url('https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d42832f3-7076-48b6-a7ea-1f89fc033687.jpeg');    background-size: cover;
+    background-position: left center;  
+    background-repeat: no-repeat;
+}
+
+.three
+{
+    background: url('https://naturesbasket.co.in/Images/Defence-colony_BannerNew.jpg');    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 600px) {
+    .product-main-div-1
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: red;
+    height: 75%;
+}
+.product-img-div
+{
+    width: 100%;
+    height: 50%;
+    background-color: green;
+    box-sizing: border-box;
+    padding: 25px;
+}
+img
+{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+  }
+  
+  /* Media query for tablets */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    .slider-card-box
+{
+    background-color: brown;
+    border: 1px solid wheat;
+    box-sizing: border-box; 
+    width: 33%;
+    
+}
+
+.one
+{
+    background: url('https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/f40541f3-f64b-4dab-8a10-249da502f3ef.jpg');
+    background-size: auto;
+}
+.two
+{
+    background: url('https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d42832f3-7076-48b6-a7ea-1f89fc033687.jpeg');    
+}
+
+.three
+{
+    background: url('https://naturesbasket.co.in/Images/Defence-colony_BannerNew.jpg');    
+}
+      }
+  
+
+  
+ 

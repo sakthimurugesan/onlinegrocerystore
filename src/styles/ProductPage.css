@@ -5,6 +5,8 @@
     align-items: center;
     height: 100vh;
     width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 .product-main-div-1
 {
@@ -12,11 +14,11 @@
     width: 80%;
     background-color: red;
     height: 75%;
-
 }
 .product-img-div
 {
     width: 50%;
+    height: 100%;
     background-color: green;
     box-sizing: border-box;
     padding: 25px;
@@ -27,6 +29,7 @@
     flex-direction: column;
     box-sizing: border-box;
     padding: 25px;
+    width: 50%;
 }
 
 img
@@ -35,3 +38,103 @@ height: 100%;
 width: 100%;
 object-fit: contain;
 }
+/* Default styles for all devices */
+
+/* Media query for phones */
+@media only screen and (max-width: 600px) {
+    .product-main-div-1
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: red;
+    height: 75%;
+}
+.product-img-div
+{
+    width: 100%;
+    height: 50%;
+    background-color: green;
+    box-sizing: border-box;
+    padding: 25px;
+}
+img
+{
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+  }
+  
+  /* Media query for tablets */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    .product-main-div-1
+    {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        background-color: red;
+        height: 75%;
+    }
+    .product-main-div
+    {
+      height: 150vh;
+    }
+    .product-img-div
+    {
+        width: 100%;
+        height: 45%;
+        background-color: green;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+    img
+    {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    }
+    .product-detail-div
+    {
+      width: 100%;
+      height: max-content;
+    }
+      }
+  
+  
+  /* Media query for desktops */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .product-main-div
+    {
+      height: 150vh;
+    }
+    .product-main-div-1
+    {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        background-color: red;
+        height: 75%;
+    }
+    .product-img-div
+    {
+        width: 100%;
+        height: 45%;
+        background-color: green;
+        box-sizing: border-box;
+        padding: 25px;
+    }
+    img
+    {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    }
+    .product-detail-div
+    {
+   width: 100%;
+    }
+      }
+  
+ 

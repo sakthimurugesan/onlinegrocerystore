@@ -33,10 +33,11 @@ const ProductPage = () => {
         <img src={'/img/'+filename}></img>
       </div>
       <div className='product-detail-div'>
-        <h1> {title}</h1>
-        <h6>{type}</h6>
-        <h6>{price}</h6>
-        <h6>{rating}</h6>
+        <h1>{title}</h1>
+        <h6>Category {type}</h6>
+        <h6>Price ${price}</h6>
+        <h6>Rating {rating}/5</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet fringilla lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque quis ullamcorper nibh, eget mattis lectus. Suspendisse potenti. Etiam cursus magna nec urna rutrum consequat. Aenean a faucibus lectus. Nam sit amet ligula et urna imperdiet hendrerit.</p>
       </div>
       </div>
     </div>

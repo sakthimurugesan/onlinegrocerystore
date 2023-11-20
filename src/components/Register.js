@@ -73,8 +73,10 @@ export default function Register() {
       toast.error('Passwords do not match', { position: 'top-center' });
       return;
     }
-
+    else{
+   alert("Registration success")
     navigate('/login');
+    }
   };
 
   const emailIsValid = (email) => {

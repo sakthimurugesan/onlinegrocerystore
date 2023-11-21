@@ -48,8 +48,8 @@ const Cart = () => {
               <div className="cell-1" data-title="SNo">{serialNumber + index}</div>
               <div className="cell-1" data-title="Product Name">{item.title}</div>
               <div className="cell-1" data-title="Quantity">{item.quantity}</div>
-              <div className="cell-1" data-title="Price">{item.price}</div>
-              <div className="cell-1" data-title="Total Price">$ {item.price * item.quantity}</div>
+              <div className="cell-1" data-title="Price">$ {item.price.toFixed(2)}</div>
+              <div className="cell-1" data-title="Total Price">$ {(item.price * item.quantity).toFixed(2)}</div>
               <div className="cell-1" data-title="Delete">
                 <button className='del-btn' onClick={() => deleteProduct(item.id)}>Delete</button>
               </div>
@@ -62,7 +62,7 @@ const Cart = () => {
             <div className="cell-1">Total Amount</div>
             <div className="cell-1" style={{
               color:"black"
-            }}>${calculateTotalAmount()}</div>
+            }}>${calculateTotalAmount().toFixed(2)}</div>
             <div className="cell-1"><a href='/'><button className='chk-btn'>CheckOut</button></a></div>
             </div>
         </div>

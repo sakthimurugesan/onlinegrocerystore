@@ -63,7 +63,7 @@ const Cart = () => {
             <div className="cell-1" style={{
               color:"black"
             }}>${calculateTotalAmount().toFixed(2)}</div>
-            <div className="cell-1"><a href='/'><button className='chk-btn'>CheckOut</button></a></div>
+            <div className="cell-1"><a href='/payment'><button className='chk-btn'>CheckOut</button></a></div>
             </div>
         </div>
       </div>

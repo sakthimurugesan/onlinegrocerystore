@@ -14,6 +14,7 @@ import Home from "./components/Home";
 import Shop from "./components/Shop";
 import ProductPage from "./components/ProductPage";
 import Cart from './components/Cart'
+import Payment from "./components/Payment";
 var login_true = false;
 
 
@@ -28,6 +29,8 @@ function App() {
 				<Route path="/register" element={<Register></Register>} />
 				<Route path="/logout" element={<Logout></Logout>} />
 				<Route path="/cart" element={<Cart></Cart>} />
+				<Route path="/payment" element={<Payment></Payment>} />
+
 			</Routes>
 		</Router>
 	);

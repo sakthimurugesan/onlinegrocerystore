@@ -35,10 +35,23 @@ export default function Footer() {
 					<div class="footer-col">
 						<h4>follow us</h4>
 						<div class="social-links">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+							<a href="#"><img style={{
+								borderRadius:"50%",
+								objectFit:"cover"
+							}} src="./tw.png"></img></a>
+							<a href="#"><img style={{
+								borderRadius:"50%",
+								objectFit:"cover"
+							}}  src="./whats.png"></img></a>
+							<a href="#"><img style={{
+								borderRadius:"50%",
+								objectFit:"cover"
+							}}  src="./moj.png"></img></a>
+							<a href="#"><img  style={{
+								borderRadius:"50%",
+								objectFit:"cover"
+							}}  src="./ig.png"></img></a>
+							
 						</div>
 					</div>
 				</div>

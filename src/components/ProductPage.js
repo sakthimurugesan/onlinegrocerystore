@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import '../styles/ProductPage.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+ import '../styles/ProductPage.css';
 import productsData from './products.json';
 
 const ProductPage = () => {
@@ -40,7 +42,7 @@ const ProductPage = () => {
   
     // Update the cart in local storage
     localStorage.setItem('cart', JSON.stringify(existingCartItems));
-    alert('Product added to cart!');
+    toast.success("Product Added to cart")
   };
 
   if (!product) {
@@ -89,6 +91,7 @@ const ProductPage = () => {
         </div>
       </div>
       <Footer />
+      <ToastContainer></ToastContainer>
     </>
   );
 };

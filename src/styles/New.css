@@ -1165,3 +1165,12 @@
   text-decoration: none;
   margin-top: 20px;
 }
+#shop-btn,.two-button
+{
+  color: black !important;
+}
+.t-btn
+{
+  background-color: white;
+  color: black;
+}

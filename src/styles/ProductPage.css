@@ -12,24 +12,57 @@
 {
     display: flex;
     width: 80%;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     height: 75%;
 }
 .product-img-div
 {
     width: 50%;
     height: 100%;
-    background-color: green;
+    background-color: rgb(255, 255, 255);
     box-sizing: border-box;
-    padding: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    
 }
+
+
 .product-detail-div
 {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    margin-left: 5%;
     padding: 25px;
     width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; 
+}
+.product-detail-div>button{
+    margin: 5px;
+    
+    padding: 5px;
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.product-detail-div> button:hover {
+  box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
 }
 
 img
@@ -53,14 +86,14 @@ object-fit: contain;
     display: flex;
     flex-direction: column;
     width: 85%;
-    background-color: red;
+   
     height: 100%;
 }
 .product-img-div
 {
     width: 100%;
     height: 40%;
-    background-color: green;
+  
     box-sizing: border-box;
     padding: 25px;
 }
@@ -84,7 +117,7 @@ object-fit: cover;
         display: flex;
         flex-direction: column;
         width: 80%;
-        background-color: red;
+       
         height: 75%;
     }
     .product-main-div
@@ -95,7 +128,7 @@ object-fit: cover;
     {
         width: 100%;
         height: 45%;
-        background-color: green;
+        
         box-sizing: border-box;
         padding: 25px;
     }
@@ -124,14 +157,14 @@ object-fit: cover;
         display: flex;
         flex-direction: column;
         width: 80%;
-        background-color: red;
+       
         height: 75%;
     }
     .product-img-div
     {
         width: 100%;
         height: 45%;
-        background-color: green;
+      
         box-sizing: border-box;
         padding: 25px;
     }

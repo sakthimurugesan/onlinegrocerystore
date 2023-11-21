@@ -10,7 +10,10 @@ function Navbar() {
       <input type="checkbox" id="nav-check" />
       <div class="nav-header">
         <div class="nav-title">
-          GreenBasket
+        <a href='/' style={{
+          color:"white",
+        textDecoration:"none"
+        }}>GreenBasket</a>
         </div>
       </div>
       <div class="nav-btn">

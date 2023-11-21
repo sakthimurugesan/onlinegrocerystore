@@ -10,10 +10,14 @@ export default function New() {
                     <div class="text-content">
                         <h1 class="white">Fresh Picks Market: Your One-Stop Shop for Quality Groceries
                         </h1>
-                       
+
                         <div class="two-button">
-                           
-                            <button class="t-btn btn">Shop</button>
+
+                            <a href='/shop' id='shop-btn' style={{
+                                color: "black",
+                                textDecoration: "none"
+                                
+                            }}><button class="t-btn btn">Shop</button></a>
                         </div>
 
                     </div>
@@ -64,8 +68,8 @@ export default function New() {
                         <img src="FruityCoffees.jpeg"></img>
                         <a href='#'><h6>Fruity Coffees</h6></a>
                     </div>
-                    
-             
+
+
                 </div>
             </div>
             <section id="one-half" class="goblack">
@@ -106,8 +110,8 @@ export default function New() {
                 <div class="container">
                     <div class="info">
                         <span><img style={{
-                            objectFit:'cover'
-                            ,borderRadius:"8px"
+                            objectFit: 'cover'
+                            , borderRadius: "8px"
                         }} src="delivery (2).jpg" alt="" /></span>
                         <div class="info__text">
                             <h1>Delivery</h1>
@@ -118,9 +122,9 @@ export default function New() {
                     </div>
                     <div class="info">
                         <span><img src="payment.jpeg" style={{
-                            objectFit:'cover'
-                            ,borderRadius:"8px"
-                        }}  alt="" /></span>
+                            objectFit: 'cover'
+                            , borderRadius: "8px"
+                        }} alt="" /></span>
                         <div class="info__text">
                             <h1>Hassle Free Payment</h1>
 
@@ -131,10 +135,10 @@ export default function New() {
                     </div>
                     <div class="info">
                         <span><img src="customer1.jpg" style={{
-                            objectFit:'cover',
-                            objectPosition:'0px'
-                            ,borderRadius:"8px"
-                        }}  alt="" /></span>
+                            objectFit: 'cover',
+                            objectPosition: '0px'
+                            , borderRadius: "8px"
+                        }} alt="" /></span>
                         <div class="info__text">
                             <h1>Customer Support</h1>
 
@@ -174,7 +178,7 @@ export default function New() {
                         <div class="four__text">
 
                             <p>
-                            From the freshest produce to friendly staff, every visit is a delight. The convenience of online ordering and prompt delivery makes this my go-to grocery destination. A five-star experience that keeps me coming back for more!
+                                From the freshest produce to friendly staff, every visit is a delight. The convenience of online ordering and prompt delivery makes this my go-to grocery destination. A five-star experience that keeps me coming back for more!
                                 "
                             </p>
 
@@ -187,7 +191,7 @@ export default function New() {
                         <div class="four__text">
 
                             <p>
-                            The selection is diverse, the staff is incredibly helpful, and the commitment to sustainability is commendable. They've turned grocery shopping into an enjoyable experience. Highly recommended!
+                                The selection is diverse, the staff is incredibly helpful, and the commitment to sustainability is commendable. They've turned grocery shopping into an enjoyable experience. Highly recommended!
                             </p>
                             <h4>Petey Cru</h4>
                         </div>
@@ -203,7 +207,7 @@ export default function New() {
                 <h5>Grocery Store</h5>
                 <h1>Our Team Is Filled With Highly Dedicated Staff</h1>
 
-             
+
 
             </section>
 

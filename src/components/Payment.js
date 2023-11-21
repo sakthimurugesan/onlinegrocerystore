@@ -30,7 +30,7 @@ const Payment = () => {
       clearTimeout(redirectTimeout);
     };
   }, [history]);
-
+  localStorage.removeItem('cart');
   return (
     <div>
       {loading && <Loader mess={"Loading"} />} 

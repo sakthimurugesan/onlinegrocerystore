@@ -4,19 +4,21 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import '../styles/ProductPage.css';
 import productsData from './products.json';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [selectValue, setSelectValue] = useState(1);
   const handleInputChange = (e) => {
-    const inputValue = parseInt(e.target.value, 10);
-    if (!isNaN(inputValue)) {
-      setSelectValue(inputValue);
-    }
-    // Additional logic if needed based on input value
-    // ...
+    let inputValue = e.target.value;
+
+    inputValue = inputValue.replace(/^0+/, '');
+
+    setSelectValue(parseInt(inputValue, 10) || 1);
   };
+  
   useEffect(() => {
     const selectedProduct = productsData.find((item) => item.id == id);
     setProduct(selectedProduct);
@@ -34,7 +36,11 @@ const ProductPage = () => {
     // Get existing cart items from local storage
     const existingCartItems = JSON.parse(localStorage.getItem('cart')) || [];
   
-    // Check if the product is already in the cart
+  if(selectValue>100)
+  {
+    toast.error("Quantity must not be above 100");
+    return;
+  }
     const existingProductIndex = existingCartItems.findIndex((item) => item.id === product.id);
   
     if (existingProductIndex !== -1) {
@@ -47,7 +53,7 @@ const ProductPage = () => {
   
     // Update the cart in local storage
     localStorage.setItem('cart', JSON.stringify(existingCartItems));
-    alert('Product added to cart!');
+    toast.success("Product Successfully added");
   };
 
   if (!product) {
@@ -60,10 +66,18 @@ const ProductPage = () => {
     if (!isNaN(inputValue)) {
       setSelectValue(inputValue);
     }
-    // Additional logic if needed based on input value
-    // ...
+  
+    // Clear the input value if it's less than 1
+    if (inputValue < 0) {
+      setSelectValue(0);
+    }
   };
-
+  const handleKeyDown = (e) => {
+    if (e.key === 'Backspace' && selectValue < 10) {
+      e.preventDefault(); // Prevent the default backspace behavior
+      setSelectValue("");
+    }
+  };
   return (
     <>
       <Navbar />
@@ -88,10 +102,11 @@ const ProductPage = () => {
             }}>
               <button style={{width:'1px' , }} onClick={()=>setSelectValue(selectValue-1)}>-</button>
               <input
-          type='number' min={1} max={100}
+          type='number' min={0} max={100}
           value={selectValue}
           onChange={handleInputChange}
           onBlur={handleBlur}
+          onKeyDown={handleKeyDown}
         />
             <button style={{width:'1px' , }} onClick={()=>setSelectValue(selectValue+1)}>+</button>
             </div>
@@ -102,6 +117,7 @@ const ProductPage = () => {
         </div>
       </div>
       <Footer />
+      <ToastContainer></ToastContainer>
     </>
   );
 };

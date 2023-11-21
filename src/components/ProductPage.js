@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
- import '../styles/ProductPage.css';
+import '../styles/ProductPage.css';
 import productsData from './products.json';
 
 const ProductPage = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [selectValue, setSelectValue] = useState(1);
-
+  const handleInputChange = (e) => {
+    const inputValue = parseInt(e.target.value, 10);
+    if (!isNaN(inputValue)) {
+      setSelectValue(inputValue);
+    }
+    // Additional logic if needed based on input value
+    // ...
+  };
   useEffect(() => {
     const selectedProduct = productsData.find((item) => item.id == id);
     setProduct(selectedProduct);
@@ -42,7 +47,7 @@ const ProductPage = () => {
   
     // Update the cart in local storage
     localStorage.setItem('cart', JSON.stringify(existingCartItems));
-    toast.success("Product Added to cart")
+    alert('Product added to cart!');
   };
 
   if (!product) {
@@ -50,6 +55,14 @@ const ProductPage = () => {
   }
 
   const { title, type, price, rating, filename } = product;
+  const handleBlur = (e) => {
+    const inputValue = parseInt(e.target.value, 10);
+    if (!isNaN(inputValue)) {
+      setSelectValue(inputValue);
+    }
+    // Additional logic if needed based on input value
+    // ...
+  };
 
   return (
     <>
@@ -70,20 +83,18 @@ const ProductPage = () => {
               primis in faucibus. Pellentesque quis ullamcorper nibh, eget
            
             </p>
-            <select
-              style={{
-                color: 'black',
-                width:"50px"
-              }}
-              value={selectValue}
-              onChange={handleSelectChange}
-            >
-              {[1, 2, 3, 4, 5].map((value) => (
-                <option key={value} value={value}>
-                  {value}
-                </option>
-              ))}
-            </select>
+            <div className='quantity-counter' style={{
+              display:"flex"
+            }}>
+              <button style={{width:'1px' , }} onClick={()=>setSelectValue(selectValue-1)}>-</button>
+              <input
+          type='number' min={1} max={100}
+          value={selectValue}
+          onChange={handleInputChange}
+          onBlur={handleBlur}
+        />
+            <button style={{width:'1px' , }} onClick={()=>setSelectValue(selectValue+1)}>+</button>
+            </div>
             <button type="button" onClick={handleAddToCart}>
               Add to Cart
             </button>
@@ -91,7 +102,6 @@ const ProductPage = () => {
         </div>
       </div>
       <Footer />
-      <ToastContainer></ToastContainer>
     </>
   );
 };

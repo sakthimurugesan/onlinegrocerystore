@@ -71,6 +71,7 @@ const ProductPage = () => {
             <select
               style={{
                 color: 'black',
+                width:"50px"
               }}
               value={selectValue}
               onChange={handleSelectChange}

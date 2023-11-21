@@ -2,13 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Table Design</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#c9e5e9, #ccddf9);
+  }
+  
+  .payment-form {
+    background: #fff;
+    box-shadow: 0px 15px 50px 10px
+  }  
+</style>
 <body>
+
+  <div class="container">
+    <div class="payment-form">
+      <h2>Payment Details</h2>
+      
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="https://dl.dropboxusercontent.com/s/sim84r2xfedj99n/%24_32.JPG" alt="Product Image">
+        <div class="product-info">
+          <span class="brand">Nike</span>
+          <span class="name">Free Run 3.0 Women</span>
+          <span class="details">Color: Grey/Orange, Size: 10.5</span>
+        </div>
+        <div class="price">$99.95</div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="https://dl.dropboxusercontent.com/s/qbj9tsbvthqq72c/Vintage-20L-Backpack-by-Fj%C3%A4llr%C3%A4ven.jpg" alt="Product Image">
+        <div class="product-info">
+          <span class="brand">Fjällräven</span>
+          <span class="name">Vintage Backpack</span>
+          <span class="details">Color: Olive, Size: 20L</span>
+        </div>
+        <div class="price">$235.95</div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="https://dl.dropboxusercontent.com/s/nbr4koso8dpoggs/6136C1p5FjL._SL1500_.jpg" alt="Product Image">
+        <div class="product-info">
+          <span class="brand">Monobento</span>
+          <span class="name">Double Lunchbox</span>
+          <span class="details">Color: Pink, Size: Medium</span>
+        </div>
+        <div class="price">$25.95</div>
+      </div>
+
+      <!-- Total -->
+      <div class="total">
+        <span>VAT 19%</span>
+        <span>Delivery</span>
+        <span class="total-label">TOTAL</span>
+        <span class="total-amount">$435.55</span>
+      </div>
+
+      <!-- Payment Form -->
+      <div class="payment-form">
+        <label for="card">Select your card:</label>
+        <div class="dropdown">
+          <button class="dropdown-btn">Visa</button>
+          <div class="dropdown-select">
+            <ul>
+              <li>Master Card</li>
+              <li>American Express</li>
+            </ul>
+          </div>
+        </div>
+
+        <img src="https://dl.dropboxusercontent.com/s/ubamyu6mzov5c80/visa_logo%20%281%29.png" alt="Credit Card" height="80" class="credit-card-image">
+
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" class="input-field">
+
+        <label for="cardHolder">Card Holder:</label>
+        <input type="text" id="cardHolder" class="input-field">
+
+        <div class="expiry-cvc">
+          <div class="expiry">
+            <label for="expiry">Expires:</label>
+            <input type="text" id="expiry" class="input-field">
+          </div>
+          <div class="cvc">
+            <label for="cvc">CVC:</label>
+            <input type="text" id="cvc" class="input-field">
+          </div>
+        </div>
+
+        <button class="pay-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

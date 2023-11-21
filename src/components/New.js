@@ -100,9 +100,7 @@ export default function New() {
             <section id="two">
                 <div class="heading ">
                     <h1>What We Offer</h1>
-                    <p class="lightblack">
-                        We are looking ahead to satisfy out customer the atmost. We are happy to help people to find right products for people to lead a Healthy and Sustainable life
-                    </p>
+              
 
                 </div>
 

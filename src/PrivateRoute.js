@@ -1,20 +1,19 @@
+// PrivateRoute.js
 import React from 'react';
 import { Route, Navigate } from 'react-router-dom';
 import { useUser } from './components/UserContext';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import TestAxios from './components/TestAxios';
 const PrivateRoute = ({ element, ...props }) => {
   const { user } = useUser();
 
-  // Check if the user is authenticated
   if (!user) {
-    // If not, redirect to the login page
-    alert("Login to access cart")
+   alert('User not authenticated. Redirecting to /login');
+    // If not authenticated, redirect to the login page
     return <Navigate to="/login" />;
   }
 
-  // If authenticated, render the provided element
-  return <Route {...props} element={element} />;
+  // If authenticated, render the provided element or Cart component
+  return element || <TestAxios />;
 };
 
 export default PrivateRoute;

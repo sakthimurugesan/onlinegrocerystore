@@ -605,7 +605,11 @@
       "description": "ghj",
       "rating": "45",
       "price": "5",
-      "id": 50
+      "id": 50,
+      "type": "fruit",
+      "filename": "49.jpg",
+    "height": 600,
+    "width": 400
     }
   ]
 }

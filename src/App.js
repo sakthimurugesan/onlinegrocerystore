@@ -31,18 +31,14 @@ function App() {
 				<Route path="/login" element={<Login></Login>} />
 				<Route path="/register" element={<Register></Register>} />
 				<Route path="/logout" element={<Logout></Logout>} />
-				<Route path="/test" element={<TestAxios></TestAxios>} />
+				<Route path="/dashboard" element={<PrivateRoute />} />
 				<Route path="/update/:id" element={<UpdatePage></UpdatePage>} />
 				<Route path="/addproduct" element={<AddProduct></AddProduct>} />
-				
+				<Route path="/cart" element={<PrivateRoute />} />
 
 
-				<Route path="/cart" element=
-				{
-				<PrivateRoute>
-					<Cart></Cart>
-				</PrivateRoute>
-				} />
+
+
 
 
 

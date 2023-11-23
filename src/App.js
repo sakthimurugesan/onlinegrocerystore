@@ -8,13 +8,13 @@ import {
 } from "react-router-dom";
 import Login from "./components/Login";
 import Logout from "./components/Logout";
-import About from "./components/About";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import ProductPage from "./components/ProductPage";
 import Cart from './components/Cart'
 import Payment from "./components/Payment";
+import PrivateRoute from "./PrivateRoute";
 var login_true = false;
 
 
@@ -28,7 +28,18 @@ function App() {
 				<Route path="/login" element={<Login></Login>} />
 				<Route path="/register" element={<Register></Register>} />
 				<Route path="/logout" element={<Logout></Logout>} />
-				<Route path="/cart" element={<Cart></Cart>} />
+
+
+
+				<Route path="/cart" element=
+				{
+				<PrivateRoute>
+					<Cart></Cart>
+				</PrivateRoute>
+				} />
+
+
+
 				<Route path="/payment" element={<Payment></Payment>} />
 
 			</Routes>

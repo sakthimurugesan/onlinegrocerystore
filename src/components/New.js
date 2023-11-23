@@ -1,54 +1,62 @@
-import '../styles/New.css'
-import filteredProducts from './products.json'
+import React, { useEffect, useState } from 'react';
+import '../styles/New.css';
+import axios from 'axios';
+
 export default function New() {
-    const trendingProducts = filteredProducts.filter((product) => product.trend === "TRUE");
-    return (
-        <>
-            <section id="one">
+  const [trendingProducts, setTrendingProducts] = useState([]);
 
-                <div class="content">
-                    <div class="text-content">
-                        <h1 class="white">Fresh Picks Market: Your One-Stop Shop for Quality Groceries
-                        </h1>
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/books');
+        // Filter the products where trend is true
+        const filteredProducts = response.data.filter(product => product.trend === "TRUE");
+        setTrendingProducts(filteredProducts);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
-                        <div class="two-button">
+    fetchData();
+  }, []);
 
-                            <a href='/shop' id='shop-btn' style={{
-                                color: "black",
-                                textDecoration: "none"
-                                
-                            }}><button class="t-btn btn">Shop</button></a>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <center style={{
-                marginTop: '50px'
-            }}> <h1>Trending Products</h1></center>
-            <div className='trending-pro-div-main'>
-
-                <div className='trending-pro-div'>
-
-                    <div className='Products'>
-                        {trendingProducts.map((product) => (
-
-                            <div className='product-div' key={product.title}>
-
-                                <img src={'./img/' + product.filename} height='300px' width='200px' alt='nil'></img>
-
-
-                                <br />
-                                <p>
-                                    <b>Product : </b>{product.title} <br />  <b>Price :</b> ${product.price} <br />
-                                    <b>Rating :</b> {product.rating}/5
-                                </p>
-                                <a href={'/shop/product/' + product.filename[0]}><button className='but'>Buy</button></a>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+  return (
+    <>
+      <section id="one">
+        <div class="content">
+          <div class="text-content">
+            <h1 class="white">Fresh Picks Market: Your One-Stop Shop for Quality Groceries</h1>
+            <div class="two-button">
+              <a href='/shop' id='shop-btn' style={{ color: "black", textDecoration: "none" }}>
+                <button class="t-btn btn">Shop</button>
+              </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <center style={{ marginTop: '50px' }}>
+        <h1>Trending Products</h1>
+      </center>
+      <div className='trending-pro-div-main'>
+        <div className='trending-pro-div'>
+          <div className='Products'>
+            {trendingProducts.map((product) => (
+              <div className='product-div' key={product.title}>
+                <img src={`/img/${product.filename}`} height='300px' width='200px' alt='nil'></img>
+                <br />
+                <p>
+                  <b>Product : </b>{product.title} <br />  <b>Price :</b> ${product.price} <br />
+                  <b>Rating :</b> {product.rating}/5
+                </p>
+                <a href={`/shop/product/${product.id}`}>
+                  <button className='but'>Buy</button>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
             <center><h1>What's Cooking</h1></center>
             <div className='cooking-main-div'>
                 <div className='cooking-card-div'>

@@ -7,6 +7,7 @@ import {
 	Switch
 } from "react-router-dom";
 import Login from "./components/Login";
+import TestAxios from "./components/TestAxios";
 import Logout from "./components/Logout";
 import Register from "./components/Register";
 import Home from "./components/Home";
@@ -15,6 +16,8 @@ import ProductPage from "./components/ProductPage";
 import Cart from './components/Cart'
 import Payment from "./components/Payment";
 import PrivateRoute from "./PrivateRoute";
+import UpdatePage from "./components/UpdatePage";
+import AddProduct from "./components/Addpage";
 var login_true = false;
 
 
@@ -28,7 +31,10 @@ function App() {
 				<Route path="/login" element={<Login></Login>} />
 				<Route path="/register" element={<Register></Register>} />
 				<Route path="/logout" element={<Logout></Logout>} />
-
+				<Route path="/test" element={<TestAxios></TestAxios>} />
+				<Route path="/update/:id" element={<UpdatePage></UpdatePage>} />
+				<Route path="/addproduct" element={<AddProduct></AddProduct>} />
+				
 
 
 				<Route path="/cart" element=

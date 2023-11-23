@@ -85,7 +85,15 @@
     background-color: red;
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+.update-btn
+{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 6px 12px;
     border-radius: 10px;
 }
 .chk-btn
@@ -93,6 +101,6 @@
     background-color: green;
     color: white;
     border: none;
-    padding: 8px 20px;
+    padding: 6px 12px;
     border-radius: 10px;
 }

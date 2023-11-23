@@ -1,24 +1,39 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import NavBar from './Navbar';
 import Footer from './Footer';
-import '../styles/Shop.css';
-import React, { useState } from 'react';
 import ProductFilter from './ProductFilter';
-import productData from './products.json';
 import ProductSearch from './ProductSearch';
-
-const allCategories = ["all", "dairy", "fruit", "vegetable", "bakery", "vegan", "meat"];
 
 const Shop = () => {
   const [filters, setFilters] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [productData, setProductData] = useState([]);
+  const [categories, setCategories] = useState([]);
 
-  const categories = Array.from(new Set(productData.map((product) => product.type)));
+  useEffect(() => {
+    // Fetch data from the server
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/books');
+        setProductData(response.data);
+        
+        // Extract unique categories from the data
+        const uniqueCategories = Array.from(new Set(response.data.map((product) => product.type)));
+        setCategories(uniqueCategories);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleFilterChange = (category) => {
     setFilters((prevFilters) =>
       prevFilters.includes(category) && category !== 'all'
         ? prevFilters.filter((filter) => filter !== category)
-        : [category === 'all' ? "all" : category]
+        : [category === 'all' ? 'all' : category]
     );
   };
 

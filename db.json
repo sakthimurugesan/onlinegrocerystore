@@ -8,8 +8,8 @@
       "filename": "0.jpg",
       "height": 600,
       "width": 400,
-      "price": "28",
-      "rating": "5",
+      "price": "29",
+      "rating": "4",
       "trend": "TRUE"
     },
     {
@@ -44,7 +44,7 @@
       "filename": "3.jpg",
       "height": 600,
       "width": 399,
-      "price": 17.68,
+      "price": "18.68",
       "rating": 4,
       "trend": "TRUE"
     },
@@ -599,18 +599,6 @@
       "price": 25.62,
       "rating": 3,
       "trend": ""
-    },
-    {
-      "title": "hjk",
-      "description": "jk",
-      "rating": "5",
-      "price": "45",
-      "type": "fruit",
-      "height": 600,
-      "width": 401,
-      "trend": "",
-      "filename": "48.jpg",
-      "id": 50
     }
   ],
   "users": [

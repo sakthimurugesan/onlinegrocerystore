@@ -1,5 +1,6 @@
-import React, { useRef,useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -19,6 +20,7 @@ import Footer from './Footer';
 import { useUser } from './UserContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -31,27 +33,34 @@ function Copyright(props) {
     </Typography>
   );
 }
+
 function Login() {
   const defaultTheme = createTheme();
-  
-  const [email, setEmail] = useState('');
-  const { loginUser } = useUser();
-  const Navigate = useNavigate();
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const userName=(data.get('email'))
-    
-    if (userName) {
-      loginUser(userName);
-      Navigate('/');
 
-      // Display a success toast on successful login
-      toast.success(`Welcome back, ${userName}!`, { position: "top-center" });
-    } else {
-      // Display an error toast if the user didn't enter an email
-      toast.error('Please enter your email!', { position: "top-center" });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { loginUser,loginWithUsername } = useUser();
+  const Navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.get(`http://localhost:3001/users?email=${email}&password=${password}`);
+      const response1 = await axios.get(`http://localhost:3001/users?email=${email}&password=${password}`);
+      console.log(response.data)
+      if (response.data.length > 0) {
+        toast.success(`Welcome back, ${response.data[0].name}!`, { position: 'top-center' });
+        loginUser(response.data[0].email);
+        loginWithUsername(response.data[0].name)
+        Navigate('/');
+      } else {
+        // User not found or incorrect password
+        alert('Invalid email or password');
+      }
+    } catch (error) {
+      console.error('Error logging in:', error);
+      alert('An error occurred. Please try again later.');
     }
   };
 
@@ -97,17 +106,14 @@ function Login() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
               />
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2 }}
-              >
+              <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
                 Sign In
               </Button>
               <Grid container>
@@ -128,6 +134,7 @@ function Login() {
         </Container>
       </ThemeProvider>
       <Footer />
+      
     </div>
   );
 }

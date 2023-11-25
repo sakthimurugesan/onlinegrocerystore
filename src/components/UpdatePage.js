@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams ,useNavigate} from 'react-router-dom';
 
 const UpdatePage = () => {
   const { id } = useParams();
@@ -9,7 +9,7 @@ const UpdatePage = () => {
     price: 0,
     rating: 0,
   });
-
+const navigate=useNavigate()
   useEffect(() => {
     fetchData();
   }, [id]);
@@ -35,6 +35,7 @@ const UpdatePage = () => {
     try {
       await axios.put(`http://localhost:3001/books/${id}`, formData);
       console.log('Item updated successfully');
+      navigate('/')
       // Redirect or perform other actions after successful update
     } catch (error) {
       console.error('Error updating item:', error);

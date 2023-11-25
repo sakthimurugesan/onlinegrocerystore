@@ -34,14 +34,7 @@ function App() {
 				<Route path="/dashboard" element={<PrivateRoute />} />
 				<Route path="/update/:id" element={<UpdatePage></UpdatePage>} />
 				<Route path="/addproduct" element={<AddProduct></AddProduct>} />
-				<Route path="/cart" element={<PrivateRoute />} />
-
-
-
-
-
-
-
+				<Route path="/cart" element={<Cart />} />
 				<Route path="/payment" element={<Payment></Payment>} />
 
 			</Routes>

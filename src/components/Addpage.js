@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useParams ,useNavigate} from 'react-router-dom';
 const AddProduct = ({ fetchData }) => {
+  const navigate=useNavigate()
   const [formData, setFormData] = useState({
     title: '',
     description: '',
     rating: 0,
     price: 0,
+    "type": "fruit","height": 600,
+    "width": 401, "trend": ""
+    ,id:500,
+    "filename": "48.jpg",
   });
 
   const handleChange = (e) => {
@@ -34,13 +39,17 @@ const AddProduct = ({ fetchData }) => {
         title: formData.title,
         description: formData.description,
         rating: formData.rating,
-        price: formData.price,
+        price: formData.price, "type": "fruit","height": 600,
+        "width": 401, "trend": ""
+        ,
+        "filename": "48.jpg",
         
       };
 
       await axios.post('http://localhost:3001/books', productData);
 
       alert('Product added successfully');
+      navigate('/dashboard')
       // Fetch updated data
       fetchData();
     } catch (error) {

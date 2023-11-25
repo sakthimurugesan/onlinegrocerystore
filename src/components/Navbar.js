@@ -30,7 +30,7 @@ function Navbar() {
         {user ? (
           <div className='login-email-div'>
               <a href='/cart' style={{color:'white'}}>Cart</a>
-              <a style={{color:'white'}}> Hello, {user.email} </a>
+              <a style={{color:'white'}}> Hello, {user.username} </a>
                <Logout></Logout> 
           </div>
         ) : (

@@ -15,10 +15,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import '../styles/Register.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import axios from 'axios';
 
 function Copyright(props) {
   return (
@@ -43,55 +42,64 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [name, setFname] = useState('');
+
 
   const handleRegister = (e) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    setEmail(data.get('email'));
-    setPassword(data.get("password"));
-    setConfirmPassword(data.get('confirm-password'));
 
-    // Use toast directly
+    // Validate form data
     if (!emailIsValid(email)) {
       toast.error('Invalid email address', { position: 'top-center' });
       return;
     }
 
-    // Validate password length
     if (password.length < 8) {
       toast.error('Password must be at least 8 characters long', { position: 'top-center' });
       return;
     }
 
-    // Validate password complexity
- 
     if (!passwordIsValid(password)) {
       toast.error('Password must contain at least one uppercase letter, one lowercase letter, one special character, and one number', { position: 'top-center' });
       return;
     }
+
     if (password !== confirmPassword) {
       toast.error('Passwords do not match', { position: 'top-center' });
       return;
     }
-    else{
-   alert("Registration success")
-    navigate('/login');
-    }
+
+    // Create a user object with the registration data
+    const newUser = {
+      email: email,
+      password: password,
+      name:name
+    };
+
+    // Send registration data to JSON server using Axios
+    axios.post('http://localhost:3001/users', newUser)
+      .then((response) => {
+        console.log('User registered successfully:', response.data);
+        toast.success('Registration successful', { position: 'top-center' });
+
+        alert('Registration successful')
+        navigate('/login');
+      })
+      .catch((error) => {
+        console.error('Error registering user:', error);
+        toast.error('Error registering user', { position: 'top-center' });
+      });
   };
 
   const emailIsValid = (email) => {
-    // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
   const passwordIsValid = (password) => {
-    // Password complexity validation
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+-={}[]|\\:;\<>,.?])[A-Za-z\d!@#$%^&*()_+-= {}[]|\\:;\<>,.?]{8,}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+-={}[]|\\:;\<>,.?])[A-Za-z\d!@#$%^&*()_+-={}[]|\\:;\<>,.?]{8,}$/;
     return passwordRegex.test(password);
   };
- 
-
   return (
     <>
     <Navbar></Navbar>
@@ -123,6 +131,8 @@ export default function Register() {
                   id="firstName"
                   label="First Name"
                   autoFocus
+                  onChange={(e) => setFname(e.target.value)}
+                  value={name}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>

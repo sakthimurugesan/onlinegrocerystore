@@ -36,7 +36,7 @@ const TestAxios = () => {
 
   return (
     <div>
-      <h1>JSON Data</h1>
+     
       <div className="box-1">
         <div className="table-1">
           <div className="row-1 header">
@@ -58,7 +58,7 @@ const TestAxios = () => {
                   Update
                 </Link></button>
               </div>
-              <div className="cell-1" data-title="Delete">
+              <div className="cell-1" data-title="">
               <button className='del-btn' onClick={() => deleteItem(item.id)}>Delete Item</button>
               </div>
             </div>

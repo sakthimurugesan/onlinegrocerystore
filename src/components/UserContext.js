@@ -21,12 +21,16 @@ export const UserProvider = ({ children }) => {
     setUser({ email });
   };
 
+  const loginWithUsername = (username) => {
+    setUser((prevUser) => ({ ...prevUser, username }));
+  };
+
   const logoutUser = () => {
     setUser(null);
   };
 
   return (
-    <UserContext.Provider value={{ user, loginUser, logoutUser }}>
+    <UserContext.Provider value={{ user, loginUser, loginWithUsername, logoutUser }}>
       {children}
     </UserContext.Provider>
   );
